@@ -33,7 +33,12 @@
             if (month == 2) {
                 days = "28 hoặc 29"
             }
-            document.getElementById('d').innerHTML = 'tháng ' + month + ' có ' + days + ' ngày!'
+            if (days == -1) {
+                document.getElementById("d").innerHTML = "tháng không tồn tại!";
+            } else {
+                document.getElementById('d').innerHTML = 'tháng ' + month + ' có ' + days + ' ngày!'
+            }
+
         }
     </script>
 </body>
